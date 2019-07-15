@@ -25,22 +25,22 @@ def main():
             continue
 
         if choice == 1:
-            shop.displaystock()
+            shop.display_stock()
 
         elif choice == 2:
-            customer.rentalTime = shop.rentBikeOnHourlyBasis(customer.requestBike())
+            customer.rentalTime = shop.rent_bike_on_hourly_basis(customer.request_bike())
             customer.rentalBasis = 1
 
         elif choice == 3:
-            customer.rentalTime = shop.rentBikeOnDailyBasis(customer.requestBike())
+            customer.rentalTime = shop.rent_bike_on_daily_basis(customer.request_bike())
             customer.rentalBasis = 2
 
         elif choice == 4:
-            customer.rentalTime = shop.rentBikeOnWeeklyBasis(customer.requestBike())
+            customer.rentalTime = shop.rent_bike_on_weekly_basis(customer.request_bike())
             customer.rentalBasis = 3
 
         elif choice == 5:
-            customer.bill = shop.returnBike(customer.returnBike())
+            customer.bill = shop.return_bike(customer.return_bike())
             customer.rentalBasis, customer.rentalTime, customer.bikes = 0,0,0        
         elif choice == 6:
             break
